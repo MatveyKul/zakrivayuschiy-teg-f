@@ -1,1 +1,1 @@
-https://matveykul.github.io/zakrivayuschiy-teg-f/
+https://github.com/MatveyKul/zakrivayuschiy-teg-f
