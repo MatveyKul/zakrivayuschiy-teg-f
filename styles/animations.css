@@ -162,16 +162,33 @@
 }
 
 /* Анимации изображений */
-.image-brightness { filter: brightness(120%); }
-.image-contrast { filter: contrast(130%); }
-.image-saturation { filter: saturate(80%); }
-.image-blur { filter: blur(2px); }
-.image-sepia { filter: sepia(70%); }
-.image-grayscale { filter: grayscale(100%); }
-.image-multiple { filter: brightness(90%) contrast(110%) saturate(120%) hue-rotate(15deg); }
-.image-hue-rotate { filter: hue-rotate(180deg); }
+.image-brightness { 
+  filter: brightness(120%); 
+}
+.image-contrast { 
+  filter: contrast(130%); 
+}
+.image-saturation { 
+  filter: saturate(80%); 
+}
+.image-blur { 
+  filter: blur(2px); 
+}
+.image-sepia { 
+  filter: sepia(70%); 
+}
+.image-grayscale { 
+  filter: grayscale(100%); 
+}
+.image-multiple { 
+  filter: brightness(90%) contrast(110%) saturate(120%) hue-rotate(15deg); 
+}
+.image-hue-rotate { 
+  filter: hue-rotate(180deg); 
+}
 
 .card:hover .card__image {
   filter: none !important;
   transition: filter 0.3s ease;
 }
+

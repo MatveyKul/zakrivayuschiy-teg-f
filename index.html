@@ -300,21 +300,18 @@
         </div>
       </article>
 
-      <!-- Чекбокс для управления модалкой (скрытый) -->
-      <input type="checkbox" id="modal-toggle" class="modal-toggle" hidden>
-
-      <!-- Кнопка "Сохранить" -->
+      <!-- Кнопка "Сохранить" (ИСПРАВЛЕНО) -->
       <div class="save-section">
-        <label for="modal-toggle" class="save-button">
+        <button type="button" class="save-button" onclick="document.getElementById('modal-dialog').showModal()">
           <svg class="floppy-icon" width="21" height="21">
             <use href="./svg/save-icon.svg#save-icon"></use>
           </svg>
           <span class="button__text">Сохранить на память</span>
-        </label>
+        </button>
       </div>
 
-      <!-- Модальное окно -->
-      <div class="modal">
+      <!-- Модальное окно (dialog) -->
+      <dialog class="modal" id="modal-dialog">
         <div class="modal__content">
           <div class="modal__header">
             <svg class="modal__icon" width="59" height="59">
@@ -322,12 +319,13 @@
             </svg>
             <h3 class="modal__title">вставьте дискету, чтобы продолжить</h3>
           </div>
-          <label for="modal-toggle" class="modal__button">
-            <span class="button__text">ОК</span>
-          </label>
+          <form method="dialog">
+            <button type="submit" class="modal__button">
+              <span class="button__text">ОК</span>
+            </button>
+          </form>
         </div>
-        <label for="modal-toggle" class="modal__overlay"></label>
-      </div>
+      </dialog>
     </main>
     <script src="./scripts/like.js"></script>
   </body>
