@@ -141,8 +141,8 @@
   position: absolute;
   inset: 0;
   background-color: var(--accent-color);
-  transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
 }
 
 .card__like-button:hover::before,
@@ -162,29 +162,29 @@
 }
 
 /* Анимации изображений */
-.image-brightness { 
-  filter: brightness(120%); 
+.image-brightness {
+  filter: brightness(120%);
 }
-.image-contrast { 
-  filter: contrast(130%); 
+.image-contrast {
+  filter: contrast(130%);
 }
-.image-saturation { 
-  filter: saturate(80%); 
+.image-saturation {
+  filter: saturate(80%);
 }
-.image-blur { 
-  filter: blur(2px); 
+.image-blur {
+  filter: blur(2px);
 }
-.image-sepia { 
-  filter: sepia(70%); 
+.image-sepia {
+  filter: sepia(70%);
 }
-.image-grayscale { 
-  filter: grayscale(100%); 
+.image-grayscale {
+  filter: grayscale(100%);
 }
-.image-multiple { 
-  filter: brightness(90%) contrast(110%) saturate(120%) hue-rotate(15deg); 
+.image-multiple {
+  filter: brightness(90%) contrast(110%) saturate(120%) hue-rotate(15deg);
 }
-.image-hue-rotate { 
-  filter: hue-rotate(180deg); 
+.image-hue-rotate {
+  filter: hue-rotate(180deg);
 }
 
 .card:hover .card__image {
