@@ -9,3 +9,169 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+/* Ключевые кадры */
+
+/* Масштабирование сердца с возвратом */
+@keyframes scale-heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Вспышка искр */
+@keyframes flash-sparks {
+  0% {
+    fill: transparent;
+  }
+  50% {
+    fill: var(--animation-fill-color);
+  }
+  100% {
+    fill: transparent;
+  }
+}
+
+/* Анимация кнопок */
+@keyframes button-hover {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Контур */
+.contour {
+  transition: fill 0.1s linear 0s;
+}
+
+/* Сердцевина */
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+
+/* Основное тело */
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear 0s;
+}
+
+/* Искры - начальное состояние */
+.sparks {
+  fill: transparent;
+}
+
+/* Элемент heart для центрирования анимации */
+.heart {
+  transform-origin: center;
+}
+
+/* Состояние :hover */
+
+/* Сердцевина при наведении */
+.like-icon:hover .core {
+  fill: var(--contour-color);
+  transition: fill 0.3s linear 0s;
+}
+
+/* Основное тело при наведении */
+.like-icon:hover .main-body {
+  fill: var(--contour-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* Состояние :active */
+
+/* Сердцевина при нажатии */
+.like-icon:active .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0s;
+}
+
+/* Основное тело при нажатии */
+.like-icon:active .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* Состояние при клике (класс is-liked) */
+
+/* Сердцевина при лайке */
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0s;
+}
+
+/* Основное тело при лайке */
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* Контур при лайке */
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.06s;
+}
+
+/* Анимация масштабирования сердца при лайке */
+.like-icon.is-liked .heart {
+  animation: scale-heart 0.3s ease-in 0.1s;
+}
+
+/* Анимация искр при лайке */
+.like-icon.is-liked .sparks {
+  animation: flash-sparks 0.3s ease-in 0.3s;
+}
+
+/* Анимации кнопок */
+.card__like-button::before,
+.save-button::before,
+.modal__button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-color);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.card__like-button:hover::before,
+.save-button:hover::before,
+.modal__button:hover::before {
+  transform: translateX(0);
+}
+
+.card__icon-button {
+  transition: border-color 0.3s ease;
+}
+
+.card__like-button,
+.save-button,
+.modal__button {
+  transition: box-shadow 0.3s ease;
+}
+
+/* Анимации изображений */
+.image-brightness { filter: brightness(120%); }
+.image-contrast { filter: contrast(130%); }
+.image-saturation { filter: saturate(80%); }
+.image-blur { filter: blur(2px); }
+.image-sepia { filter: sepia(70%); }
+.image-grayscale { filter: grayscale(100%); }
+.image-multiple { filter: brightness(90%) contrast(110%) saturate(120%) hue-rotate(15deg); }
+.image-hue-rotate { filter: hue-rotate(180deg); }
+
+.card:hover .card__image {
+  filter: none !important;
+  transition: filter 0.3s ease;
+}
