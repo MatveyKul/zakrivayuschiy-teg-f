@@ -324,6 +324,47 @@
   display: none;
 }
 
+/* Фильтры изображений */
+.image-brightness {
+  filter: brightness(120%);
+  transition: filter 0.3s ease;
+}
+
+.image-contrast {
+  filter: contrast(130%);
+  transition: filter 0.3s ease;
+}
+
+.image-saturation {
+  filter: saturate(80%);
+  transition: filter 0.3s ease;
+}
+
+.image-blur {
+  filter: blur(2px);
+  transition: filter 0.3s ease;
+}
+
+.image-sepia {
+  filter: sepia(70%);
+  transition: filter 0.3s ease;
+}
+
+.image-grayscale {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.image-multiple {
+  filter: brightness(90%) contrast(110%) saturate(120%) hue-rotate(15deg);
+  transition: filter 0.3s ease;
+}
+
+.image-hue-rotate {
+  filter: hue-rotate(180deg);
+  transition: filter 0.3s ease;
+}
+
 /* Адаптация для 375px */
 @media (width <= 375px) {
   .page {
