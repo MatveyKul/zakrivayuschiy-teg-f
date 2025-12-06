@@ -78,9 +78,8 @@
   font-variation-settings: 'wght' var(--text-weight);
 }
 
-.card__memory {
+.card__text + .card__text {
   margin-top: 25px;
-  font-variation-settings: 'wght' var(--text-weight);
 }
 
 .main {
@@ -141,8 +140,10 @@
   background-color: var(--bg-color);
   cursor: pointer;
   font-family: var(--accent-font);
+  font-weight: var(--button-weight);
+  font-size: 14px; /* Добавлено - общий размер шрифта */
+  line-height: 0.9; /* Добавлено - общий интерлиньяж */
   box-sizing: border-box;
-  font-variation-settings: 'wght' var(--button-weight);
 }
 
 .button:focus {
@@ -153,11 +154,8 @@
   box-shadow: 2px 2px 0 var(--accent-color);
 }
 
-/* Кнопка Like (специфичные стили) */
 .card__like-button {
   padding: 9px 17px;
-  font-size: 14px;
-  line-height: 0.9;
   inline-size: 130px;
   block-size: 38.5px;
 }
@@ -172,12 +170,9 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  width: 100%;
-  max-width: 335px;
+  min-width: 335px;
   min-height: 55px;
   margin-bottom: 100px;
-  font-size: 14px;
-  line-height: 90%;
 }
 
 .save-button .floppy-icon {
@@ -212,7 +207,7 @@
   z-index: 1;
   opacity: 0.5;
   color: var(--accent-color);
-  font-family: 'PressStart2P', sans-serif;
+  font-family: var(--accent-font);
   font-size: 14px;
   text-transform: uppercase;
   text-shadow: 
@@ -291,6 +286,7 @@
   color: var(--accent-color);
   font-family: var(--accent-font);
   font-size: 14px;
+  font-weight: var(--button-weight);
   line-height: 1.5;
   text-transform: uppercase;
 }
@@ -310,8 +306,6 @@
   max-width: 293px;
   min-height: 38px;
   padding: 10px;
-  font-size: 14px;
-  line-height: 0.9;
   text-align: center;
   text-transform: uppercase;
 }

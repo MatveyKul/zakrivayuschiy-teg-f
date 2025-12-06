@@ -158,11 +158,3 @@
 .card:hover .card__image {
   filter: none;
 }
-
-.modal[open] {
-  animation: modalFadeIn 0.3s ease-out;
-}
-
-.modal[open]::backdrop {
-  animation: backdropFadeIn 0.3s ease-out;
-}
