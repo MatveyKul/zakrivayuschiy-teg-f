@@ -4,9 +4,9 @@
   --accent-font: 'PressStart2P', fantasy;
   
   /* Веса шрифтов */
-  --text-weight: 400;
-  --title-weight: 700;
-  --accent-weight: 785;
+  --text-weight: 410;           /* Для обычного текста */
+  --title-weight: 715;          /* Для заголовков карточек */
+  --button-weight: 400;         /* Для всех кнопок */
   
   /* Градиенты для фона */
   --bg-gradient: 
@@ -18,14 +18,13 @@
   --card-width: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
   --logo-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
   --title-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
-  --header-padding-block: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem);
   
   /* Цвета для сердца */
   --bg-color: #fff;
   --accent-color: #000;
   --button-text-color: #fff;
-  --contour-color: #000;           /* Цвет контура */
-  --animation-fill-color: #ff0000; /* Цвет заливки (красный) */
+  --contour-color: #000;
+  --animation-fill-color: #ff0000;
   --main-body-color: #000;
   --label-stroke-color: #fff;
   --label-stroke-width: 1px;
